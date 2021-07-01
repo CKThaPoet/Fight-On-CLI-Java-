@@ -50,13 +50,11 @@ public class MainMenu {
 			}
 			case "add": {
 				// we need to prompt the user for the enemy's name, and their role id
-				log.info("User adding an Enemy"); //place some logs in important areas info type
-
 				System.out.println("Enter Enemy Name:");
 				String enemy_name = scan.nextLine();
 
 				System.out.println("Enter Enemy Role Type: Human, Monster, ,Animal, Undead");
-				String role_type = scan.nextLine().toLowerCase();
+				String role_type = scan.nextLine();
 
 				System.out.println(
 						"Enter Role Type Id: -> enter the number that corresponds to the role type = 1)Human 2)Monster 3)Animal 4)Undead ");
@@ -71,6 +69,7 @@ public class MainMenu {
 
 				// Put the new Enemy into the addEnemy() method in the EnemyDao
 				ed.addEnemy(newEnemy);
+				log.info("User adding an Enemy"); //place some logs in important areas info type
 				break;
 			}
 			case "change": {
@@ -97,8 +96,6 @@ public class MainMenu {
 						"Type the Role Type you want your enemy changed to: Human, Monster, Animal, Undead or make up your own custom Role Type...");
 				String typeInput = scan.nextLine(); // the user enters the ID of the enemy to change the role of that
 													// enemy
-				scan.nextLine();
-
 				System.out.println(
 						"Enter the number of the the Role ID of the enemy you are changing to: 1)Human 2)Monster 3)Animal 4)Undeador "
 								+ "make up your own custom Role ID to match your Role Type *must be a number*...");
@@ -117,7 +114,10 @@ public class MainMenu {
 			}
 			case "delete": {
 				System.out.println("These are the emenimes in the game... who will you vanguish?" + newL
-						+ "type 0 to return to the main menu.");
+						+ "type 0 to return to the main menu." + newL);
+				
+				System.out.println("EnemyID Enemy Name  RoleID  Role Type");
+				System.out.println("_______ __________  ______  _________");
 
 				// this is using the already existing getEnemies() method
 				List<Enemy> enemies = ed.getEnemies();
@@ -145,7 +145,6 @@ public class MainMenu {
 				} else {
 					ed.removeEnemy(idInput);
 				}
-
 				break;
 			}
 			case "view": {
