@@ -8,10 +8,14 @@ public class GameInformation {
 		String newL = System.lineSeparator();
 		Scanner scan = new Scanner(System.in);
 		
-		System.out.println("Welcome to Fight On! " + newL + "This game is made by Chani Kinsler using JAVA using MAVEN and ProstgresSQL for the database handling. " 
+		
+		System.out.println("Welcome to Fight On! " + newL + "This a Command Line Interface texted based game made by Chani Kinsler using JAVA program language, MAVEN the project object management"
+				+ newL + "tool to add extra functionality to our program using the POM.XML, some of the features are log4j for loggin important events in the application, Junit for testing methods"
+				+ newL + "and pending features, and I can add more properties and dependencies in the future as needed." 
+				+ newL + "ProstgresSQL is also used for JDBC database handling in this project it is using a one to many relationship." 
 				+ newL + "This game is about you the player fighting until your last breath so let's play..." 
 				+ newL + "You have the option of adding your own custom enemies to the game, changing their roles, and deleting the ones you add... " 
-				+ newL + "while playing the game you can stop at any time and return to the main menu" + newL);
+				+ newL + "while playing the game you can stop at any time and return to the main menu." + newL);
 		
 		System.out.println("===============================================================");
 		
