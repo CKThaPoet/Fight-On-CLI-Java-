@@ -133,7 +133,7 @@ public class EnemyDao implements EnemyDaoInterface {
 
 			ps.executeUpdate(); // Run the PreparedStatement now that we've given values to its parameters
 
-			System.out.println("Enemy role_id changed to: " + enemy_Id);
+			System.out.println("Enemy role_id " + enemy_Id + " changed.");
 
 		} catch (SQLException e) {
 			System.out.println("Change role failed!");
