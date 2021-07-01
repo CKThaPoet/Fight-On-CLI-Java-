@@ -17,11 +17,12 @@ public class FightOnLauncher {
 		// here we will test weather our connection from the ConectionUtil Class is
 		// successful
 		try (Connection connect = ConnectionUtil.getConnection()) {
-			System.out.println("Connection Successful");
+			System.out.println("*Connection Successful*");
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
 		System.out.println("======================");
+		System.out.println(" ");
 
 		// instantiate a new object so we can use the display menu
 		MainMenu menu = new MainMenu();
